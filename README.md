@@ -1,6 +1,6 @@
 # Simple Text Prediction Algorithm
 
-This is a simple bigram AI text prediction algorithm that I made a few years ago.
+This is a simple trigram AI text prediction algorithm that I made a few years ago.
 
 ![Image](image.png)
 
