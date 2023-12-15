@@ -22,7 +22,12 @@ There are **no dependencies** in this project, so you do not need to install any
 
 ## Usage
 
-Then, run the code with:
+Then, enter the code directory with:
+```
+cd Simple-Text-Prediction
+```
+
+Finally, run the code with:
 ```
 python main.py
 ```
