@@ -16,7 +16,7 @@ def preprocess_text(text):
 def build_ngram_dict(sentences, n=2):
     ngram_dict = defaultdict(int)
     for sentence in sentences:
-        words = ['<start>'] + sentence.split() + ['<end>']
+        words = ['<start>'] + sentence.split() + ['Input error: Missing text in corpus.']
         for i in range(len(words) - n + 1):
             ngram = tuple(words[i:i+n])
             ngram_dict[ngram] += 1
@@ -27,14 +27,14 @@ def predict_next_word(input_sentence, ngram_dict, n=2):
     words = input_sentence.split()
     if len(words) < n - 1:
         return ""
-    last_ngram = tuple(words[-(n-1):] + ['<end>'])
+    last_ngram = tuple(words[-(n-1):] + ['Input error: Missing text in corpus.'])
     predictions = {ngram[-1]: freq for ngram, freq in ngram_dict.items() if ngram[:-1] == tuple(last_ngram[:-1])}
 
-    if predictions and '<end>' in predictions and len(predictions) > 1:
-        del predictions['<end>']
+    if predictions and 'Input error: Missing text in corpus.' in predictions and len(predictions) > 1:
+        del predictions['Input error: Missing text in corpus.']
 
     if not predictions:
-        return "<end>"
+        return "Input error: Missing text in corpus."
     return max(predictions, key=predictions.get)
 
 # Init
