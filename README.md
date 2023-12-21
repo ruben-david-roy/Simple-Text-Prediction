@@ -61,4 +61,4 @@ Developed by Ruben Roy.
 
 ## License
 
-GrooveFM is open-source and is under the MIT License. See the [LICENSE](LICENSE) for more information.
+This text prediction algorithm is open-source and is under the MIT License. See the [LICENSE](LICENSE) for more information.
