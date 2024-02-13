@@ -18,7 +18,6 @@ First, clone the Github repository with this command:
 ```
 git clone https://github.com/DarkTwentyFive/Simple-Text-Prediction.git
 ```
-There are **no dependencies** in this project, so you do not need to install anything else.
 
 ## Usage
 
